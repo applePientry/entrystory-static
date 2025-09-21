@@ -8,3 +8,9 @@ chrome.storage.local.get({ stats: [] }, (result) => {
         ul.appendChild(li);
     });
 });
+
+document.getElementById("fetchBtn").addEventListener("click", () => {
+    chrome.runtime.sendMessage({ type: "MANUAL_FETCH" }, (response) => {
+        console.log("Background 응답:", response);
+    });
+});
