@@ -156,8 +156,7 @@ async function fetchEntrystory() {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "sec-gpc": "1",
-            "x-client-type": "Client",
-            "x-token": JSON.parse(document.querySelector("#__NEXT_DATA__").innerText).props.pageProps.initialState.common.user.xToken
+            "x-client-type": "Client"
         },
         referrer: "https://playentry.org/community/entrystory/list?sort=created&term=all",
         body: JSON.stringify({ query, variables }),
