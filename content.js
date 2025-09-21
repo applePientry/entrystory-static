@@ -11,9 +11,10 @@ async function fetchEntrystory() {
     const res = await fetch("https://playentry.org/graphql", {
         method: "POST",
         headers: {
+            accept: "*/*",
             "Content-Type": "application/json",
-            "csrf-token": document.cookie.match(/_csrf=([^;]+)/)?.[1] || "",
-            "x-token": localStorage.getItem("x-token") || "",
+            "csrf-token": JSON.parse(document.getElementById("__NEXT_DATA__").innerText).props.initialProps.csrfToken,
+            "x-token": JSON.parse(document.querySelector("#__NEXT_DATA__").innerText).props.pageProps.initialState.common.user.xToken,
             "User-Agent": navigator.userAgent,
             "Referer": "https://playentry.org/"
         },
