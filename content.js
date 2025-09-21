@@ -139,7 +139,7 @@ async function fetchEntrystory() {
         searchType: "scroll",
         term: "all",
         discussType: "entrystory",
-        pageParam: { display: 10, sort: "created" }
+        pageParam: { display: 1, sort: "created" }
     };
 
     const res = await fetch("https://playentry.org/graphql/SELECT_ENTRYSTORY", {
