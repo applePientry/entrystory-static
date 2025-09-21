@@ -3,6 +3,7 @@
     "name": "Entry Story Stats",
     "version": "1.0.2",
     "permissions": ["storage", "alarms", "tabs", "scripting"],
+    "host_permissions": ["https://playentry.org/*"],
     "background": {
         "service_worker": "background.js"
     },
